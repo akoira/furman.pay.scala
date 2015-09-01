@@ -1,0 +1,36 @@
+[
+  {
+    "id": 0,
+    "value": 120.55,
+    "order": {
+      "id": 0,
+      "number": "08-1001",
+      "name": "Order 1"
+    },
+    "relay": {
+      "id": 0,
+      "name": "Смена 0"
+    },
+    "service": {
+      "id": 0,
+      "name": "Распил"
+    }
+  },
+  {
+    "id": 1,
+    "value": 110.66,
+    "order": {
+      "id": 0,
+      "number": "08-1001",
+      "name": "Order 1"
+    },
+    "relay": {
+      "id": 1,
+      "name": "Смена 1"
+    },
+    "service": {
+      "id": 0,
+      "name": "Распил"
+    }
+  }
+]

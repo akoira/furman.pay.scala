@@ -14,28 +14,23 @@ angular.module('myApp.view1', ['ngRoute', 'ui.grid', 'ui.grid.edit', 'ui.grid.ce
     $scope.gridOptions.enableCellEditOnFocus = true;
 
     $scope.gridOptions.columnDefs = [
-        { name: 'id', displayName: "Заказ", enableCellEdit: false },
-        { name: 'age', enableCellEditOnFocus:false, displayName:'age (f2/dblClick edit)', width: 200  },
-        { name: 'address.city', enableCellEdit: true, width: 300 },
-        { name: 'name', displayName: 'Name (editOnFocus)', width: 200}
+        { field: "order", displayName: "Заказ", enableCellEdit: false, cellTemplate: "<div>{{row.entity.order.number}}/{{row.entity.order.name}}</div>"},
+        { field: 'relay.name', displayName: "Смена", enableCellEdit: false },
+        { field: 'service.name', displayName: "Распил", enableCellEdit: false},
+        { field: 'value', displayName: 'Распил', enableCellEdit: false}
     ];
 
-    $http.get('/app/data/500_complex.json')
+    $http.get('/app/data/orders.json')
         .success(function(data) {
             $scope.gridOptions.data = data;
         });
 
-    $scope.currentFocused = "";
-
-    $scope.getCurrentFocus = function(){
-        var rowCol = $scope.gridApi.cellNav.getFocusedCell();
-        if(rowCol !== null) {
-            $scope.currentFocused = 'Row Id:' + rowCol.row.entity.id + ' col:' + rowCol.col.colDef.name;
-        }
-    },
-
     $scope.gridOptions.onRegisterApi = function(gridApi){
         $scope.gridApi = gridApi;
     };
+    $scope.order2String = function(order) {
+        console.log(order.number);
+        return order.number + "/" + order.name;
+    }
 }]);
 
