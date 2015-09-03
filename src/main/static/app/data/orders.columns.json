@@ -1,0 +1,82 @@
+[
+  {
+    "field": "order",
+    "displayName": "Заказ",
+    "enableCellEdit": false,
+    "cellTemplate": "<div>{{row.entity.order.number}}/{{row.entity.order.name}}</div>",
+    "pinnedLeft": true,
+    "width": 200
+  },
+  {
+    "field": "cutting.value",
+    "displayName": "Распил м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "directGlueing.value",
+    "displayName": "Оклейка прямолинейная м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "curveGlueing.value",
+    "displayName": "Оклейка криволинейная м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "milling.value",
+    "displayName": "Фрезеровка м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "drilling.value",
+    "displayName": "Фрезеровка под петли шт.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "groove.value",
+    "displayName": "Паз м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "angle.value",
+    "displayName": "Угол. распил м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "patch.value",
+    "displayName": "Склейка м.кв.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  },
+  {
+    "field": "cutoff.value",
+    "displayName": "Срез м.п.",
+    "enableCellEdit": true,
+    "type": "number",
+    "enablePinning": "false",
+    "width": 150
+  }
+]

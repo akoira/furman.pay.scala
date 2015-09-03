@@ -28,3 +28,11 @@
   content: "";
   padding: 0;
 }
+
+.grid {
+  width: 90%;
+  height: 640px;
+}
+.ng-scope {
+  text-align: right;
+}

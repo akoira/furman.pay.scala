@@ -7,30 +7,107 @@
       "number": "08-1001",
       "name": "Order 1"
     },
-    "relay": {
+    "cutting": {
       "id": 0,
-      "name": "Смена 0"
+      "value": 412.55
     },
-    "service": {
-      "id": 0,
-      "name": "Распил"
+    "directGlueing": {
+      "value": 312.55
+    },
+    "curveGlueing": {
+      "value": 234.55
+    },
+    "milling": {
+      "value": 345.55
+    },
+    "drilling": {
+      "value": 567.55
+    },
+    "groove": {
+      "value": 645.55
+    },
+    "angle": {
+      "value": 6757.55
+    },
+    "patch": {
+      "value": 34535.55
+    },
+    "cutoff": {
+      "value": 345345.55
     }
   },
   {
-    "id": 1,
-    "value": 110.66,
+    "id": 0,
+    "value": 120.55,
     "order": {
       "id": 0,
       "number": "08-1001",
       "name": "Order 1"
     },
-    "relay": {
-      "id": 1,
-      "name": "Смена 1"
-    },
-    "service": {
+    "cutting": {
       "id": 0,
-      "name": "Распил"
+      "value": 412.55
+    },
+    "directGlueing": {
+      "value": 312.55
+    },
+    "curveGlueing": {
+      "value": 234.55
+    },
+    "milling": {
+      "value": 345.55
+    },
+    "drilling": {
+      "value": 567.55
+    },
+    "groove": {
+      "value": 645.55
+    },
+    "angle": {
+      "value": 6757.55
+    },
+    "patch": {
+      "value": 0.55
+    },
+    "cutoff": {
+      "value": 345345.55
+    }
+  },
+  {
+    "id": 0,
+    "value": 120.55,
+    "order": {
+      "id": 0,
+      "number": "08-1001",
+      "name": "Order 1"
+    },
+    "cutting": {
+      "id": 0,
+      "value": 412.55
+    },
+    "directGlueing": {
+      "value": 312.55
+    },
+    "curveGlueing": {
+      "value": 234.55
+    },
+    "milling": {
+      "value": 345.55
+    },
+    "drilling": {
+      "value": 567.55
+    },
+    "groove": {
+      "value": 645.55
+    },
+    "angle": {
+      "value": 6757.55
+    },
+    "patch": {
+      "value": 34535.55
+    },
+    "cutoff": {
+      "value": 345345.55
     }
   }
 ]

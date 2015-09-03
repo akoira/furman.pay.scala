@@ -4,10 +4,10 @@
 angular.module('myApp', [
   'ngRoute',
   'ui.grid', 'ui.grid.edit',
-  'myApp.view1',
+  'myApp.orders',
   'myApp.view2',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/orders'});
 }]);
