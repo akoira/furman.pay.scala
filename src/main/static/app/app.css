@@ -33,6 +33,10 @@
   width: 90%;
   height: 640px;
 }
-.ng-scope {
+.ui-grid {
+  text-align: right;
+}
+
+input[type="number"] {
   text-align: right;
 }
