@@ -1,0 +1,38 @@
+[
+  {
+    "field": "year",
+    "displayName": "Год",
+    "cellTemplate": "<div class='ui-grid-cell-contents'>{{grid.appScope.yearCellValue(grid, row, col)}}</div>",
+    "grouping": {
+      "groupPriority": 0
+    },
+    "sort": {
+      "priority": 0,
+      "direction": "asc"
+    }
+  },
+  {
+    "field": "month.number",
+    "displayName": "Месяц",
+    "cellTemplate": "<div class='ui-grid-cell-contents'>{{grid.appScope.monthCellValue(grid, row, col)}}</div>",
+    "grouping": {
+      "groupPriority": 1
+    },
+    "sort": {
+      "priority": 1,
+      "direction": "asc"
+    }
+  },
+  {
+    "field": "day",
+    "displayName": "День"
+  },
+  {
+    "field": "replay.name",
+    "displayName": "Смена"
+  },
+  {
+    "field": "replay.members.name",
+    "displayName": "Работник"
+  }
+]
