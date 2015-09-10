@@ -1,14 +1,15 @@
 package controllers
 
-import javax.inject.Singleton
+import javax.inject.{Inject, Singleton}
 
 import org.slf4j.{Logger, LoggerFactory}
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json._
 import play.api.mvc._
-import play.modules.reactivemongo.MongoController
+import play.modules.reactivemongo.{ReactiveMongoApi, ReactiveMongoComponents, MongoController}
 import play.modules.reactivemongo.json.collection.JSONCollection
-import reactivemongo.api.Cursor
+import reactivemongo.api.{ReadPreference, Cursor}
+import play.modules.reactivemongo.json._
 
 import scala.concurrent.Future
 
@@ -18,7 +19,8 @@ import scala.concurrent.Future
  * @see https://github.com/ReactiveMongo/Play-ReactiveMongo
  */
 @Singleton
-class Users extends Controller with MongoController {
+class Users @Inject() (val reactiveMongoApi: ReactiveMongoApi)
+  extends Controller with MongoController with ReactiveMongoComponents {
 
   private final val logger: Logger = LoggerFactory.getLogger(classOf[Users])
 
@@ -64,7 +66,7 @@ class Users extends Controller with MongoController {
         user =>
           // find our user by first name and last name
           val nameSelector = Json.obj("firstName" -> firstName, "lastName" -> lastName)
-          collection.update(nameSelector, user).map {
+          collection.update(selector = nameSelector, update = user).map {
             lastError =>
               logger.debug(s"Successfully updated with LastError: $lastError")
               Created(s"User Updated")
@@ -80,7 +82,7 @@ class Users extends Controller with MongoController {
       // sort them by creation date
       sort(Json.obj("created" -> -1)).
       // perform the query and get a cursor of JsObject
-      cursor[User]
+      cursor[User];
 
     // gather all the JsObjects in a list
     val futureUsersList: Future[List[User]] = cursor.collect[List]()
@@ -95,5 +97,4 @@ class Users extends Controller with MongoController {
         Ok(users(0).get)
     }
   }
-
 }
